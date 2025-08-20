@@ -1,6 +1,6 @@
 # 💻 Hackathon: Gateway de Tareas con GitHub Copilot
 
-¡Bienvenidos al hackathon de desarrollo de APIs! Tu misión es crear un gateway HTTP que consuma un servicio gRPC de gestión de tareas, **usando GitHub Copilot para acelerar tu desarrollo**.
+¡Bienvenidos al hackathon de desarrollo utilizando GitHub Copilot! Tu misión es crear un gateway HTTP que consuma un servicio gRPC de gestión de tareas, **usando GitHub Copilot para acelerar tu desarrollo**.
 
 ## 🎯 Objetivo
 
