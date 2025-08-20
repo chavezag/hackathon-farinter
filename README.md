@@ -1,4 +1,4 @@
-# 🚀 Hackathon: Gateway de Tareas con GitHub Copilot
+# 💻 Hackathon: Gateway de Tareas con GitHub Copilot
 
 ¡Bienvenidos al hackathon de desarrollo de APIs! Tu misión es crear un gateway HTTP que consuma un servicio gRPC de gestión de tareas, **usando GitHub Copilot para acelerar tu desarrollo**.
 
@@ -10,7 +10,12 @@ Implementar un **gateway HTTP completo** que:
 - Maneje validaciones y errores correctamente
 - Demuestre el poder de GitHub Copilot
 
+## 🚀 Integraciones
+Crea tu rama `feature/<tu-nombre>` a partir de `main`, para evitar conflictos y mantener un historial limpio.
+
 ## ⏱️ Tiempo: 2.5 horas
+
+No pasa nada si no terminas a tiempo, pero trata de avanzar lo más posible.
 
 ## 🛠️ Elige tu arma
 
