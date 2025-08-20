@@ -1,0 +1,365 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-08-19T20:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v9.0.0",
+  "resources": [
+    {
+      "_id": "req_listar_tareas",
+      "parentId": "fld_tareas",
+      "modified": 1692468000000,
+      "created": 1692468000000,
+      "url": "{{ _.base_url }}/tareas",
+      "name": "Listar Tareas",
+      "description": "Obtiene lista paginada de todas las tareas",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_limite",
+          "name": "limite",
+          "value": "10",
+          "description": "Número máximo de tareas a retornar",
+          "disabled": false
+        },
+        {
+          "id": "pair_desplazamiento",
+          "name": "desplazamiento",
+          "value": "0",
+          "description": "Número de tareas a omitir desde el inicio",
+          "disabled": false
+        }
+      ],
+      "headers": [
+        {
+          "id": "pair_content_type",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692468000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_obtener_tarea",
+      "parentId": "fld_tareas",
+      "modified": 1692468100000,
+      "created": 1692468100000,
+      "url": "{{ _.base_url }}/tareas/{{ _.tarea_id }}",
+      "name": "Obtener Tarea por ID",
+      "description": "Obtiene una tarea específica por su ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_content_type",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692467900000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_crear_tarea",
+      "parentId": "fld_tareas",
+      "modified": 1692468200000,
+      "created": 1692468200000,
+      "url": "{{ _.base_url }}/tareas",
+      "name": "Crear Nueva Tarea",
+      "description": "Crea una nueva tarea en el sistema",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"Completar proyecto de hackathon\",\n  \"descripcion\": \"Implementar gateway HTTP que consuma el servicio gRPC de tareas\",\n  \"prioridad\": 5,\n  \"completada\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_content_type",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692467800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_actualizar_tarea",
+      "parentId": "fld_tareas",
+      "modified": 1692468300000,
+      "created": 1692468300000,
+      "url": "{{ _.base_url }}/tareas/{{ _.tarea_id }}",
+      "name": "Actualizar Tarea Completa",
+      "description": "Actualiza todos los campos de una tarea existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"Proyecto de hackathon actualizado\",\n  \"descripcion\": \"Implementar y probar gateway HTTP con todos los métodos CRUD\",\n  \"prioridad\": 4,\n  \"completada\": true\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_content_type",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692467700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_modificar_tarea",
+      "parentId": "fld_tareas",
+      "modified": 1692468400000,
+      "created": 1692468400000,
+      "url": "{{ _.base_url }}/tareas/{{ _.tarea_id }}",
+      "name": "Modificar Tarea Parcial",
+      "description": "Modifica campos específicos de una tarea (PATCH)",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"completada\": true,\n  \"prioridad\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_content_type",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692467600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_eliminar_tarea",
+      "parentId": "fld_tareas",
+      "modified": 1692468500000,
+      "created": 1692468500000,
+      "url": "{{ _.base_url }}/tareas/{{ _.tarea_id }}",
+      "name": "Eliminar Tarea",
+      "description": "Elimina una tarea del sistema",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_content_type",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692467500000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_prueba_validacion_titulo",
+      "parentId": "fld_validaciones",
+      "modified": 1692468600000,
+      "created": 1692468600000,
+      "url": "{{ _.base_url }}/tareas",
+      "name": "Validación: Título Requerido",
+      "description": "Prueba que retorna error cuando falta el título",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"descripcion\": \"Tarea sin título para probar validación\",\n  \"prioridad\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_content_type",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692467400000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_prueba_validacion_prioridad",
+      "parentId": "fld_validaciones",
+      "modified": 1692468700000,
+      "created": 1692468700000,
+      "url": "{{ _.base_url }}/tareas",
+      "name": "Validación: Prioridad Inválida",
+      "description": "Prueba que retorna error con prioridad fuera de rango (1-5)",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"Tarea con prioridad inválida\",\n  \"descripcion\": \"Esta tarea tiene prioridad 10, debe fallar\",\n  \"prioridad\": 10\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_content_type",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692467300000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_tareas",
+      "parentId": "wrk_hackathon_tareas",
+      "modified": 1692467000000,
+      "created": 1692467000000,
+      "name": "Operaciones CRUD - Tareas",
+      "description": "Endpoints principales para gestionar tareas",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1692467000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_validaciones",
+      "parentId": "wrk_hackathon_tareas",
+      "modified": 1692467100000,
+      "created": 1692467100000,
+      "name": "Pruebas de Validación",
+      "description": "Endpoints para probar validaciones y manejo de errores",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1692466900000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_hackathon_tareas",
+      "parentId": null,
+      "modified": 1692466000000,
+      "created": 1692466000000,
+      "name": "Hackathon - API Gateway Tareas",
+      "description": "Colección para probar la API de gestión de tareas del hackathon",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_hackathon_tareas",
+      "modified": 1692466000000,
+      "created": 1692466000000,
+      "name": "Entorno Base (Node.js)",
+      "data": {
+        "base_url": "http://localhost:3000",
+        "tarea_id": "obtener-de-listar-tareas",
+        "servidor_grpc": "172.16.2.231:50051"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "tarea_id",
+          "servidor_grpc"
+        ]
+      },
+      "color": "#7d69cb",
+      "isPrivate": false,
+      "metaSortKey": 1692466000000,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_dotnet",
+      "parentId": "env_base",
+      "modified": 1692466100000,
+      "created": 1692466100000,
+      "name": "Gateway .NET",
+      "data": {
+        "base_url": "http://localhost:5000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1692466100000,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_django",
+      "parentId": "env_base",
+      "modified": 1692466200000,
+      "created": 1692466200000,
+      "name": "Gateway Django",
+      "data": {
+        "base_url": "http://localhost:8000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1692466200000,
+      "_type": "environment"
+    }
+  ]
+}
